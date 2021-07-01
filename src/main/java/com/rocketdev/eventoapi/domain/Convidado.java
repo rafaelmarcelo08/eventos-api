@@ -22,8 +22,8 @@ public class Convidado {
 	/** Atributos */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
-	private Integer id;
+	@Column(name = "id_convidado")
+	private Integer idConvidado;
 	@Column(name = "nome_convidado")
 	private String nome;
 	@Column(name = "idade_convidado")
@@ -33,20 +33,20 @@ public class Convidado {
 	public Convidado() {
 	}
 
-	public Convidado(Integer id, String nome, Integer idade) {
+	public Convidado(Integer idConvidado, String nome, Integer idade) {
 		super();
-		this.id = id;
+		this.idConvidado = idConvidado;
 		this.nome = nome;
 		this.idade = idade;
 	}
 
 	/** Get e Sets */
-	public Integer getId() {
-		return id;
+	public Integer getIdConvidado() {
+		return idConvidado;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setIdConvidado(Integer idConvidado) {
+		this.idConvidado = idConvidado;
 	}
 
 	public String getNome() {
@@ -68,13 +68,13 @@ public class Convidado {
 	/** ToString */
 	@Override
 	public String toString() {
-		return "Convidado [id=" + id + ", nome=" + nome + ", idade=" + idade + "]";
+		return "Convidado [idConvidado=" + idConvidado + ", nome=" + nome + ", idade=" + idade + "]";
 	}
 
-	/** hashCode equals */
+	/** HashCode equals */
 	@Override
 	public int hashCode() {
-		return Objects.hash(id);
+		return Objects.hash(idConvidado);
 	}
 
 	@Override
@@ -86,6 +86,6 @@ public class Convidado {
 		if (getClass() != obj.getClass())
 			return false;
 		Convidado other = (Convidado) obj;
-		return Objects.equals(id, other.id);
+		return Objects.equals(idConvidado, other.idConvidado);
 	}
 }

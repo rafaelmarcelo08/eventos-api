@@ -20,7 +20,6 @@ import javax.persistence.Table;
 public class Evento {
 
 	/** Atributos */
-	/** Atributos */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_evento")
