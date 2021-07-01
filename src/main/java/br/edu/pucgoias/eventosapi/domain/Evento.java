@@ -23,7 +23,7 @@ public class Evento {
 	/** Atributos */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name = "id_evento")
 	private Integer id;
 	@Column(name = "nome_evento")
 	private String nome;
