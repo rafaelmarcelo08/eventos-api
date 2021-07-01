@@ -1,4 +1,4 @@
-package br.edu.pucgoias.eventosapi.controller;
+package br.edu.pucgoias.eventosapi.resources;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

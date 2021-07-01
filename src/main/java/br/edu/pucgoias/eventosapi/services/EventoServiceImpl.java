@@ -1,4 +1,4 @@
-package br.edu.pucgoias.eventosapi.service;
+package br.edu.pucgoias.eventosapi.services;
 
 import java.util.List;
 import org.springframework.stereotype.Service;
