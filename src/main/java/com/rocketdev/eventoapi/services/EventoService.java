@@ -1,7 +1,8 @@
-package br.edu.pucgoias.eventosapi.services;
+package com.rocketdev.eventoapi.services;
 
 import java.util.List;
-import br.edu.pucgoias.eventosapi.domain.Evento;
+
+import com.rocketdev.eventoapi.domain.Evento;
 
 public interface EventoService {
 	

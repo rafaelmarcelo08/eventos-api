@@ -1,10 +1,10 @@
-package br.edu.pucgoias.eventosapi.resources;
+package com.rocketdev.eventoapi.resources;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class EventoController {
+public class EventoResource {
 	
 	@GetMapping("/")
 	public String iniciar() {

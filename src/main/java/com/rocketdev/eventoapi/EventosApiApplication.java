@@ -1,4 +1,4 @@
-package br.edu.pucgoias.eventosapi;
+package com.rocketdev.eventoapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

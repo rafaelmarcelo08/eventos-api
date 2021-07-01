@@ -1,7 +1,8 @@
-package br.edu.pucgoias.eventosapi.repositories;
+package com.rocketdev.eventoapi.repositories;
 
 import org.springframework.data.repository.CrudRepository;
-import br.edu.pucgoias.eventosapi.domain.Convidado;
+
+import com.rocketdev.eventoapi.domain.Convidado;
 
 /**
  * Interface que define as operações da camada de persistencia de Convidado

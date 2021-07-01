@@ -1,7 +1,7 @@
-package br.edu.pucgoias.eventosapi.domain;
+package com.rocketdev.eventoapi.domain;
 
+import java.util.Date;
 import java.util.Objects;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,34 +10,41 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Classe que representa os dados na persistencia de 'Convidado'
+ * Classe que representa os dados na persistencia de 'Evento'
  * 
  * @author Rafael Marcelo
  * 
  */
 @Entity
-@Table(name = "convidado")
-public class Convidado {
+@Table(name = "evento")
+public class Evento {
 
+	/** Atributos */
 	/** Atributos */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
+	@Column(name = "id_evento")
 	private Integer id;
-	@Column(name = "nome_convidado")
+	@Column(name = "nome_evento")
 	private String nome;
-	@Column(name = "idade_convidado")
-	private Integer idade;
+	@Column(name = "local_evento")
+	private String local;
+	@Column(name = "valor_evento")
+	private Double valor;
+	@Column(name = "data_evento")
+	private Date data;
 
 	/** Construtores */
-	public Convidado() {
+	public Evento() {
 	}
 
-	public Convidado(Integer id, String nome, Integer idade) {
+	public Evento(Integer id, String nome, String local, Double valor, Date data) {
 		super();
 		this.id = id;
 		this.nome = nome;
-		this.idade = idade;
+		this.local = local;
+		this.valor = valor;
+		this.data = data;
 	}
 
 	/** Get e Sets */
@@ -57,18 +64,34 @@ public class Convidado {
 		this.nome = nome;
 	}
 
-	public Integer getIdade() {
-		return idade;
+	public String getLocal() {
+		return local;
 	}
 
-	public void setIdade(Integer idade) {
-		this.idade = idade;
+	public void setLocal(String local) {
+		this.local = local;
+	}
+
+	public Double getValor() {
+		return valor;
+	}
+
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+
+	public Date getData() {
+		return data;
+	}
+
+	public void setData(Date data) {
+		this.data = data;
 	}
 
 	/** ToString */
 	@Override
 	public String toString() {
-		return "Convidado [id=" + id + ", nome=" + nome + ", idade=" + idade + "]";
+		return "Evento [id=" + id + ", nome=" + nome + ", local=" + local + ", valor=" + valor + ", data=" + data + "]";
 	}
 
 	/** hashCode equals */
@@ -85,7 +108,7 @@ public class Convidado {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Convidado other = (Convidado) obj;
+		Evento other = (Evento) obj;
 		return Objects.equals(id, other.id);
 	}
 }
