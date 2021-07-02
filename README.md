@@ -41,7 +41,7 @@ A API é constituída com duas tabelas tendo seus respectivos atributos:
 Para baixar o repositório local: 
 
 ```bash
-git clone
+git clone https://github.com/rafaelmarcelo08/eventos-api.git
 ```
 
 ## 📝 Licença
