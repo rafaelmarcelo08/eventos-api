@@ -23,7 +23,7 @@ public class Evento {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_evento")
-	private Integer id;
+	private Integer idEvento;
 	@Column(name = "nome_evento")
 	private String nome;
 	@Column(name = "local_evento")
@@ -37,9 +37,9 @@ public class Evento {
 	public Evento() {
 	}
 
-	public Evento(Integer id, String nome, String local, Double valor, Date data) {
+	public Evento(Integer idEvento, String nome, String local, Double valor, Date data) {
 		super();
-		this.id = id;
+		this.idEvento = idEvento;
 		this.nome = nome;
 		this.local = local;
 		this.valor = valor;
@@ -47,12 +47,12 @@ public class Evento {
 	}
 
 	/** Get e Sets */
-	public Integer getId() {
-		return id;
+	public Integer getIdEvento() {
+		return idEvento;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setIdEvento(Integer idEvento) {
+		this.idEvento = idEvento;
 	}
 
 	public String getNome() {
@@ -90,13 +90,14 @@ public class Evento {
 	/** ToString */
 	@Override
 	public String toString() {
-		return "Evento [id=" + id + ", nome=" + nome + ", local=" + local + ", valor=" + valor + ", data=" + data + "]";
+		return "Evento [idEvento=" + idEvento + ", nome=" + nome + ", local=" + local + ", valor=" + valor + ", data="
+				+ data + "]";
 	}
 
-	/** hashCode equals */
+	/** HashCode equals */
 	@Override
 	public int hashCode() {
-		return Objects.hash(id);
+		return Objects.hash(idEvento);
 	}
 
 	@Override
@@ -108,6 +109,7 @@ public class Evento {
 		if (getClass() != obj.getClass())
 			return false;
 		Evento other = (Evento) obj;
-		return Objects.equals(id, other.id);
+		return Objects.equals(idEvento, other.idEvento);
 	}
+
 }
