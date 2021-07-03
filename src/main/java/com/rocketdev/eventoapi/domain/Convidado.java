@@ -1,5 +1,6 @@
 package com.rocketdev.eventoapi.domain;
 
+import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,7 +17,9 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "convidado")
-public class Convidado {
+public class Convidado implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	/** Atributos */
 	@Id
