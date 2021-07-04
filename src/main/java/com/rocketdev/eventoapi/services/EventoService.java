@@ -5,7 +5,7 @@ import com.rocketdev.eventoapi.domain.Evento;
 import com.rocketdev.eventoapi.utils.EventoAPIException;
 
 /**
- * Interface que define as operações da camada de negocio de Instrumento
+ * Interface que define as operações da camada de negocio de Evento
  * 
  * @author Rafael Marcelo
  *
