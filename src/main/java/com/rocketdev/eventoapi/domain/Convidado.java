@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -31,6 +33,8 @@ public class Convidado implements Serializable {
 	@Column(name = "idade_convidado")
 	private Integer idade;
 
+	@ManyToOne()
+	@JoinColumn(name = "evento_id")
 	private Evento evento;
 
 	/** Construtores */
