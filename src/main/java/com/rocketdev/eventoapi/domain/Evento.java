@@ -1,7 +1,9 @@
 package com.rocketdev.eventoapi.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,7 +23,7 @@ import javax.persistence.Table;
 public class Evento implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	/** Atributos */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,6 +37,8 @@ public class Evento implements Serializable {
 	private Double valor;
 	@Column(name = "data_evento")
 	private Date data;
+
+	private List<Convidado> convidados = new ArrayList<>();
 
 	/** Construtores */
 	public Evento() {
@@ -90,6 +94,14 @@ public class Evento implements Serializable {
 		this.data = data;
 	}
 
+	public List<Convidado> getConvidados() {
+		return convidados;
+	}
+
+	public void setConvidados(List<Convidado> convidados) {
+		this.convidados = convidados;
+	}
+
 	/** ToString */
 	@Override
 	public String toString() {
@@ -114,5 +126,4 @@ public class Evento implements Serializable {
 		Evento other = (Evento) obj;
 		return Objects.equals(idEvento, other.idEvento);
 	}
-
 }

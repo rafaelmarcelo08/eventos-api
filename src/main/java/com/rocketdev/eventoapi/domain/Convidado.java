@@ -31,15 +31,18 @@ public class Convidado implements Serializable {
 	@Column(name = "idade_convidado")
 	private Integer idade;
 
+	private Evento evento;
+
 	/** Construtores */
 	public Convidado() {
 	}
 
-	public Convidado(Integer idConvidado, String nome, Integer idade) {
+	public Convidado(Integer idConvidado, String nome, Integer idade, Evento evento) {
 		super();
 		this.idConvidado = idConvidado;
 		this.nome = nome;
 		this.idade = idade;
+		this.evento = evento;
 	}
 
 	/** Get e Sets */
@@ -65,6 +68,14 @@ public class Convidado implements Serializable {
 
 	public void setIdade(Integer idade) {
 		this.idade = idade;
+	}
+
+	public Evento getEvento() {
+		return evento;
+	}
+
+	public void setEvento(Evento evento) {
+		this.evento = evento;
 	}
 
 	/** ToString */
