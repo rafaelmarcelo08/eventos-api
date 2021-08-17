@@ -11,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 /**
  * Classe que representa os dados na persistencia de 'Convidado'
  * 
@@ -33,6 +35,7 @@ public class Convidado implements Serializable {
 	@Column(name = "idade_convidado")
 	private Integer idade;
 
+	@JsonBackReference
 	@ManyToOne()
 	@JoinColumn(name = "evento_id")
 	private Evento evento;

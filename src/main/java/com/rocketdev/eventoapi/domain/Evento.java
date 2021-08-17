@@ -13,6 +13,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 /**
  * Classe que representa os dados na persistencia de 'Evento'
  * 
@@ -39,6 +41,7 @@ public class Evento implements Serializable {
 	@Column(name = "data_evento")
 	private Date data;
 
+	@JsonManagedReference
 	@OneToMany(mappedBy = "evento")
 	private List<Convidado> convidados = new ArrayList<>();
 

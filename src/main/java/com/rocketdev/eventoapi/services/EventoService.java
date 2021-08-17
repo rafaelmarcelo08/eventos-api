@@ -58,6 +58,6 @@ public interface EventoService {
 	 * @throws EventoAPIException caso exista um erro, retorna uma
 	 *                            EventoAPIException
 	 */
-	public List<Evento> listar() throws EventoAPIException;
+	public Iterable<Evento> listar() throws EventoAPIException;
 
 }

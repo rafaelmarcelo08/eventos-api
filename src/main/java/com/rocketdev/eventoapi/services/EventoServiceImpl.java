@@ -1,10 +1,12 @@
 package com.rocketdev.eventoapi.services;
 
-import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+
 import com.rocketdev.eventoapi.domain.Evento;
+import com.rocketdev.eventoapi.repositories.EventoRepository;
 import com.rocketdev.eventoapi.utils.EventoAPIException;
 
 /**
@@ -14,8 +16,11 @@ import com.rocketdev.eventoapi.utils.EventoAPIException;
  *
  */
 @Service
-@Transactional 
+@Transactional
 public class EventoServiceImpl implements EventoService {
+
+	@Autowired
+	EventoRepository eventoRepository;
 
 	@Override
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
@@ -35,7 +40,6 @@ public class EventoServiceImpl implements EventoService {
 	@Transactional(readOnly = false, propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 	public void excluir(Integer id) throws EventoAPIException {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
@@ -47,9 +51,8 @@ public class EventoServiceImpl implements EventoService {
 
 	@Override
 	@Transactional(readOnly = true, propagation = Propagation.SUPPORTS, rollbackFor = Exception.class)
-	public List<Evento> listar() throws EventoAPIException {
-		// TODO Auto-generated method stub
-		return null;
+	public Iterable<Evento> listar() throws EventoAPIException {
+		return eventoRepository.findAll();
 	}
 
 }
