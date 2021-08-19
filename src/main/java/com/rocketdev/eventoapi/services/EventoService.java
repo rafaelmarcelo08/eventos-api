@@ -1,6 +1,8 @@
 package com.rocketdev.eventoapi.services;
 
 import java.util.List;
+import java.util.Optional;
+
 import com.rocketdev.eventoapi.domain.Evento;
 import com.rocketdev.eventoapi.utils.EventoAPIException;
 
@@ -49,7 +51,7 @@ public interface EventoService {
 	 * @throws EventoAPIException caso exista um erro, retorna uma
 	 *                            EventoAPIException
 	 */
-	public Evento consultar(Integer id) throws EventoAPIException;
+	public Optional<Evento> consultar(Integer id) throws EventoAPIException;
 
 	/**
 	 * Método para listar os eventos

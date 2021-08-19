@@ -1,5 +1,7 @@
 package com.rocketdev.eventoapi.services;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -44,9 +46,8 @@ public class EventoServiceImpl implements EventoService {
 
 	@Override
 	@Transactional(readOnly = true, propagation = Propagation.SUPPORTS, rollbackFor = Exception.class)
-	public Evento consultar(Integer id) throws EventoAPIException {
-		// TODO Auto-generated method stub
-		return null;
+	public Optional<Evento> consultar(Integer id) throws EventoAPIException {
+		return eventoRepository.findById(id);
 	}
 
 	@Override
