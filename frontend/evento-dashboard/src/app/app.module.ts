@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { EventoListComponent } from './cadastro-evento/evento-list/evento-list.component';
 import { EventoNewComponent } from './cadastro-evento/evento-new/evento-new.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { EventoNewComponent } from './cadastro-evento/evento-new/evento-new.comp
     EventoNewComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
