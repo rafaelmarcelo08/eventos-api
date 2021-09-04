@@ -12,13 +12,13 @@ import com.rocketdev.eventoapi.domain.Evento;
 import com.rocketdev.eventoapi.services.EventoService;
 
 @RestController
-@RequestMapping("/evento")
+@RequestMapping("/rest")
 public class EventoResource {
 
 	@Autowired
 	EventoService eventoService;
 
-	@GetMapping("/listar")
+	@GetMapping("/evento/listar")
 	public Iterable<Evento> listar() {
 		return eventoService.listar();
 	}

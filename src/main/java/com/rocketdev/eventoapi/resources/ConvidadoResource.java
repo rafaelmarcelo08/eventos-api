@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.rocketdev.eventoapi.repositories.ConvidadoRepository;
 
 @RestController
-@RequestMapping("/convidado")
+@RequestMapping("/rest")
 public class ConvidadoResource {
 
 	@Autowired
